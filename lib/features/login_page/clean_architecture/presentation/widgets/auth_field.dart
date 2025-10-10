@@ -11,7 +11,7 @@ class AuthField extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          
+
           TextFormField(
             controller: textController,
             validator: (value) {
@@ -20,7 +20,11 @@ class AuthField extends StatelessWidget {
               }
               return null;
             },
-            decoration: InputDecoration(hintText: text ?? ''),
+            decoration: InputDecoration(
+            border: OutlineInputBorder(
+
+            ),
+              hintText: text ?? ''),
           )
 
         ],

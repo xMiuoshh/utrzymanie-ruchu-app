@@ -27,21 +27,38 @@ class _StartScreenState extends State<StartScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Form(
-         child: Column(
-      
-          mainAxisAlignment: MainAxisAlignment.center,
-           children: [
-             AuthField(text: 'Username', textController: usernameController,),
-             SizedBox( height: Margins.spaceBetweenTextFields),
-             AuthField(text: 'Password', textController: passwordController,),
-             SizedBox( height: Margins.spaceBetweenTextFields,),
-             AuthField(text: 'Email', textController: emailController,),
-             SizedBox( height: Margins.spaceBetweenTextFields, ),
-             
-           ],
-         ),
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            children: [
+               Padding(
+                 padding: const EdgeInsets.only(top: Margins.padding50, bottom: Margins.padding50),
+                 child: Text(" chuj"),
+               ),
+              Form(
+               child: Padding(
+                 padding: const EdgeInsets.all(Margins.padding20),
+                 child: Column(children: [
+                       AuthField(text: 'Username', textController: usernameController,),
+                       SizedBox( height: Margins.spaceBetweenTextFields),
+                       AuthField(text: 'Password', textController: passwordController,),
+                       SizedBox( height: Margins.spaceBetweenTextFields,),
+                       AuthField(text: 'Email', textController: emailController,),
+                       SizedBox( height: Margins.spaceBetweenTextFields, ),
+                 ],),
+               )
+                 
+                       
+                 
+                    
+                
+                     
+                  
+                 
+               ),
+              
+              
+          ]),
         ),
       ),
     );
