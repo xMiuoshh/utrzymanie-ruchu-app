@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:utrzymanie_ruchu_app/core/utils/margins.dart';
+import 'package:utrzymanie_ruchu_app/core/themes/margins.dart';
+import 'package:utrzymanie_ruchu_app/core/themes/text_styles.dart';
 import 'package:utrzymanie_ruchu_app/features/login_page/clean_architecture/presentation/widgets/auth_field.dart';
 
-class StartScreen extends StatefulWidget{
-  StartScreen({super.key});
+class SignInScreen extends StatefulWidget{
+
+  const SignInScreen({super.key,});
 
   @override
-  State<StartScreen> createState() => _StartScreenState();
+  State<SignInScreen> createState() => _SignInScreenState();
 }
 
-class _StartScreenState extends State<StartScreen> {
+class _SignInScreenState extends State<SignInScreen> {
   final usernameController = TextEditingController();
 
   final passwordController = TextEditingController();
@@ -28,38 +30,39 @@ class _StartScreenState extends State<StartScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Center(
-          child: Column(
-            children: [
-               Padding(
-                 padding: const EdgeInsets.only(top: Margins.padding50, bottom: Margins.padding50),
-                 child: Text(" chuj"),
-               ),
-              Form(
-               child: Padding(
-                 padding: const EdgeInsets.all(Margins.padding20),
-                 child: Column(children: [
-                       AuthField(text: 'Username', textController: usernameController,),
-                       SizedBox( height: Margins.spaceBetweenTextFields),
-                       AuthField(text: 'Password', textController: passwordController,),
-                       SizedBox( height: Margins.spaceBetweenTextFields,),
-                       AuthField(text: 'Email', textController: emailController,),
-                       SizedBox( height: Margins.spaceBetweenTextFields, ),
-                 ],),
-               )
-                 
-                       
-                 
-                    
-                
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+             Padding(
+               padding: const EdgeInsets.only(top: Margins.padding80, bottom: Margins.padding20),
+               child: Text(
+                style: AppTextStyle.h1Text,
+                'SignIn'),
+             ),
+            Form(
+             child: Padding(
+               padding: const EdgeInsets.all(Margins.padding20),
+               child: Column(children: [
+                     AuthField(text: 'Username', textController: usernameController,),
+                     SizedBox( height: Margins.spaceBetweenTextFields),
+                     AuthField(text: 'Password', textController: passwordController,),
+                     SizedBox( height: Margins.spaceBetweenTextFields,),
+                     AuthField(text: 'Email', textController: emailController,),
+                     SizedBox( height: Margins.spaceBetweenTextFields, ),
+               ],),
+             )
+               
                      
+               
                   
-                 
-               ),
               
-              
-          ]),
-        ),
+                   
+                
+               
+             ),
+            
+            
+        ]),
       ),
     );
   }

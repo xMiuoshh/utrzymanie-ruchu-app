@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:utrzymanie_ruchu_app/core/themes/app_theme.dart';
 import 'package:utrzymanie_ruchu_app/features/login_page/clean_architecture/presentation/widgets/start_screen.dart';
 
 void main() {
@@ -13,11 +14,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
+      theme: AppTheme.theme
         
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home:  StartScreen(),
+        
+      ,
+      home:  SignInScreen(),
     );
   }
 }

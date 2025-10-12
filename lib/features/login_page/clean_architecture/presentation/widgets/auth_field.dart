@@ -21,9 +21,6 @@ class AuthField extends StatelessWidget {
               return null;
             },
             decoration: InputDecoration(
-            border: OutlineInputBorder(
-
-            ),
               hintText: text ?? ''),
           )
 
