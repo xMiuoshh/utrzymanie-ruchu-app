@@ -31,17 +31,17 @@ class _SignInScreenState extends State<SignInScreen> {
     return Scaffold(
       body: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
              Padding(
-               padding: const EdgeInsets.only(top: Margins.padding80, bottom: Margins.padding20),
+               padding: const EdgeInsets.fromLTRB(Margins.padding20, Margins.padding80, Margins.padding20, Margins.padding20),
                child: Text(
                 style: AppTextStyle.h1Text,
                 'SignIn'),
              ),
             Form(
              child: Padding(
-               padding: const EdgeInsets.all(Margins.padding20),
+               padding: const EdgeInsets.fromLTRB(Margins.padding20, 0, Margins.padding20, 0),
                child: Column(children: [
                      AuthField(text: 'Username', textController: usernameController,),
                      SizedBox( height: Margins.spaceBetweenTextFields),
