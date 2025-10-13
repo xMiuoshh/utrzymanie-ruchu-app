@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:utrzymanie_ruchu_app/core/themes/margins.dart';
 import 'package:utrzymanie_ruchu_app/core/themes/text_styles.dart';
+import 'package:utrzymanie_ruchu_app/features/login_page/clean_architecture/presentation/widgets/auth_confirm_button.dart';
 import 'package:utrzymanie_ruchu_app/features/login_page/clean_architecture/presentation/widgets/auth_field.dart';
 
 class SignInScreen extends StatefulWidget{
@@ -43,23 +44,22 @@ class _SignInScreenState extends State<SignInScreen> {
              child: Padding(
                padding: const EdgeInsets.fromLTRB(Margins.padding20, 0, Margins.padding20, 0),
                child: Column(children: [
-                     AuthField(text: 'Username', textController: usernameController,),
+                     AuthInputText(text: 'Username', textController: usernameController,),
                      SizedBox( height: Margins.spaceBetweenTextFields),
-                     AuthField(text: 'Password', textController: passwordController,),
+                     AuthInputText(text: 'Password', textController: passwordController,),
                      SizedBox( height: Margins.spaceBetweenTextFields,),
-                     AuthField(text: 'Email', textController: emailController,),
+                     AuthInputText(text: 'Email', textController: emailController,),
                      SizedBox( height: Margins.spaceBetweenTextFields, ),
                ],),
-             )
-               
-                     
-               
-                  
-              
-                   
-                
                
              ),
+          
+             ),
+             Padding(
+               padding: const EdgeInsets.fromLTRB(Margins.padding20, 0, Margins.padding20, 0),
+               child: AuthConfirmButton(),
+             ),
+             
             
             
         ]),

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class AuthField extends StatelessWidget {
+class AuthInputText extends StatelessWidget {
   final TextEditingController textController;
   final String? text;
-  const AuthField ({super.key, required this.text, required this.textController});
-
+  const AuthInputText ({super.key, required this.text, required this.textController});
+ 
   @override
   Widget build(BuildContext context) {
     return Center(
