@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:utrzymanie_ruchu_app/core/themes/margins.dart';
 import 'package:utrzymanie_ruchu_app/core/themes/text_styles.dart';
 import 'package:utrzymanie_ruchu_app/features/login_page/clean_architecture/presentation/widgets/auth_confirm_button.dart';
-import 'package:utrzymanie_ruchu_app/features/login_page/clean_architecture/presentation/widgets/auth_field.dart';
+import 'package:utrzymanie_ruchu_app/features/login_page/clean_architecture/presentation/widgets/auth_input_text.dart';
 
 class SignInScreen extends StatefulWidget{
 
