@@ -22,10 +22,12 @@ class AuthConfirmButton extends StatelessWidget{
         style: AppTextStyle.buttonText,
         'Continue'),
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.resolveWith<Color?>((states) {
-          if (states.contains(MaterialState.pressed)) {
-            return Colors.red;
-          }else return Colors.blue;
+        
+        backgroundColor: WidgetStateProperty.resolveWith<Color?>((states) {
+          if (states.contains(WidgetState.pressed)) {
+            return const Color.fromARGB(255, 79, 35, 202);
+          }else {return AppColors.primary;
+          }
         },
       
       
