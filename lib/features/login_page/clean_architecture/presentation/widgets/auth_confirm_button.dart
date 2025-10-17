@@ -16,9 +16,7 @@ class AuthConfirmButton extends StatelessWidget{
       child: ElevatedButton(onPressed: () {
         
       },
-      child:  Text(
-        style: AppTextStyle.buttonText,
-        'Continue'),
+      
       style: ButtonStyle(
         
         backgroundColor: WidgetStateProperty.resolveWith<Color?>((states) {
@@ -27,9 +25,14 @@ class AuthConfirmButton extends StatelessWidget{
           }else {return AppColors.primary;
           }
         },
-      
+  
+    )
       
      ),
-    )));
+     child: Text(
+        style: AppTextStyle.buttonText,
+        'Continue'),
+    )
+    );
   }
 }
