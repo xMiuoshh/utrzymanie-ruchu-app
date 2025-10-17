@@ -13,4 +13,16 @@ class AppTextStyle {
     fontWeight: FontWeight.w500,
     color: AppColors.white100
   );
+  static const authTextSpan1 = TextStyle(
+    fontFamily: 'Circular Std',
+    fontSize: 12,
+    color: AppColors.white100,
+    fontWeight: FontWeight.normal
+  );
+  static const authTextSpan2 = TextStyle(
+    fontFamily: 'Circular Std',
+    fontSize: 12,
+    color: AppColors.white100,
+    fontWeight: FontWeight.bold
+  );
 }

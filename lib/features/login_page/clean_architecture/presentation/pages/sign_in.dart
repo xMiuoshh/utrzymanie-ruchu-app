@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:utrzymanie_ruchu_app/core/themes/margins.dart';
 import 'package:utrzymanie_ruchu_app/core/themes/text_styles.dart';
@@ -12,12 +13,17 @@ class SignInScreen extends StatefulWidget{
   State<SignInScreen> createState() => _SignInScreenState();
 }
 
+
+
+
+
 class _SignInScreenState extends State<SignInScreen> {
   final usernameController = TextEditingController();
 
   final passwordController = TextEditingController();
 
   final emailController = TextEditingController();
+
 
   @override
   void dispose() {
@@ -27,9 +33,10 @@ class _SignInScreenState extends State<SignInScreen> {
     super.dispose();
   }
 
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+return Scaffold(
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -59,6 +66,30 @@ class _SignInScreenState extends State<SignInScreen> {
                padding: const EdgeInsets.fromLTRB(Margins.padding20, 0, Margins.padding20, 0),
                child: AuthConfirmButton(),
              ),
+
+             Padding(
+               padding: const EdgeInsets.fromLTRB(Margins.padding20, Margins.padding20, Margins.padding20, 0),
+               child: RichText(text: TextSpan(
+                children: [
+               
+                  TextSpan(
+                    text: 'Forgot Password? ',
+                    style: AppTextStyle.authTextSpan1
+                  ),
+                  TextSpan(
+                    recognizer: TapGestureRecognizer()..onTap = () {
+                      // TODO route do resetu hasla
+                    },
+                    text: 'Reset ',
+                    style: AppTextStyle.authTextSpan2
+                  ),
+                  
+                  
+                  ] 
+               )),
+             )
+
+
              
             
             

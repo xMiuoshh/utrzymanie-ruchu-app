@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:utrzymanie_ruchu_app/core/themes/app_theme.dart';
-import 'package:utrzymanie_ruchu_app/features/login_page/clean_architecture/presentation/widgets/start_screen.dart';
+import 'package:utrzymanie_ruchu_app/features/login_page/clean_architecture/presentation/pages/sign_in.dart';
 
 void main() {
   runApp(const MyApp());

@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:utrzymanie_ruchu_app/core/themes/colors.dart';
 import 'package:utrzymanie_ruchu_app/core/themes/text_styles.dart';
 
-class AuthConfirmButton extends StatelessWidget{
-  const AuthConfirmButton({super.key});
+class LoginWith extends StatelessWidget{
+
+  const LoginWith({super.key})
+
   @override
-  Widget build(BuildContext context) {
-    return Container(
+  Widget build (BuildContext context) {
+        return Container(
       width: MediaQuery.of(context).size.width,
       height: 50,
       decoration: BoxDecoration(
