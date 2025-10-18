@@ -34,16 +34,21 @@ class LoginWithButton extends StatelessWidget{
                 
                 
                ),
-              ),child: Row(
-                
-                mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Icon(Icons.facebook),
+              ),child: Stack(
+                alignment: Alignment.center,
+                children: [
+
+            Align( // Wyrownywanie
+              alignment: Alignment.centerLeft,
+              child: Icon(Icons.facebook)),
+
             Text(
               style: AppTextStyle.buttonText,
               'Continue'),
+
+        
           ],
-                ),
+              )
               )
               ),
         )
