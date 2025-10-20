@@ -49,7 +49,7 @@ return Scaffold(
                padding: const EdgeInsets.fromLTRB(Margins.padding20, 0, Margins.padding20, 0),
                child: Column(children: [
                      AuthInputText(text: 'Password', textController: passwordController,),
-                     SizedBox( height: Margins.spaceBetweenTextFields),
+                     SizedBox( height: Margins.spaceBetweenTextFields15),
 
                ],),
                
