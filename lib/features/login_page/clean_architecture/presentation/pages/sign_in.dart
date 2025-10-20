@@ -89,8 +89,12 @@ return Scaffold(
                   ] 
                )),
              ),
-             SizedBox(height: Margins.padding20,),
-             LoginWithButton()
+             SizedBox(height: Margins.padding15,),
+             LoginWithButton(icon: Icon(Icons.facebook), text: 'Continue with Facebook',),
+             SizedBox(height: Margins.padding15,),
+             LoginWithButton(icon: Icon(Icons.apple), text: 'Continue with Apple',),
+             SizedBox(height: Margins.padding15,),
+             LoginWithButton(icon: Icon(Icons.login), text: 'Continue with Google',)
 
 
              

@@ -4,8 +4,10 @@ import 'package:utrzymanie_ruchu_app/core/themes/margins.dart';
 import 'package:utrzymanie_ruchu_app/core/themes/text_styles.dart';
 
 class LoginWithButton extends StatelessWidget{
+  final Icon icon;
+  final String text;
 
-  const LoginWithButton({super.key});
+  const LoginWithButton({super.key, required this.icon, required this.text});
 
   @override
   Widget build (BuildContext context) {
@@ -40,11 +42,12 @@ class LoginWithButton extends StatelessWidget{
 
             Align( // Wyrownywanie
               alignment: Alignment.centerLeft,
-              child: Icon(Icons.facebook)),
+              child: icon
+              ),
 
             Text(
               style: AppTextStyle.buttonText,
-              'Continue'),
+              text),
 
         
           ],
