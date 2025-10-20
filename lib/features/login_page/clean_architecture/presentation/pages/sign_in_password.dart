@@ -6,31 +6,27 @@ import 'package:utrzymanie_ruchu_app/features/login_page/clean_architecture/pres
 import 'package:utrzymanie_ruchu_app/features/login_page/clean_architecture/presentation/widgets/auth_input_text.dart';
 import 'package:utrzymanie_ruchu_app/features/login_page/clean_architecture/presentation/widgets/login_with.dart';
 
-class SignInScreen extends StatefulWidget{
+class SignInPasswordScreen extends StatefulWidget{
 
-  const SignInScreen({super.key,});
+  const SignInPasswordScreen({super.key,});
 
   @override
-  State<SignInScreen> createState() => _SignInScreenState();
+  State<SignInPasswordScreen> createState() => _SignInPasswordScreenState();
 }
 
 
 
 
 
-class _SignInScreenState extends State<SignInScreen> {
-  final usernameController = TextEditingController();
+class _SignInPasswordScreenState extends State<SignInPasswordScreen> {
 
   final passwordController = TextEditingController();
 
-  final emailController = TextEditingController();
 
 
   @override
   void dispose() {
     passwordController.dispose();
-    usernameController.dispose();
-    emailController.dispose();
     super.dispose();
   }
 
@@ -52,12 +48,9 @@ return Scaffold(
              child: Padding(
                padding: const EdgeInsets.fromLTRB(Margins.padding20, 0, Margins.padding20, 0),
                child: Column(children: [
-                     AuthInputText(text: 'Username', textController: usernameController,),
-                     SizedBox( height: Margins.spaceBetweenTextFields),
                      AuthInputText(text: 'Password', textController: passwordController,),
-                     SizedBox( height: Margins.spaceBetweenTextFields,),
-                     AuthInputText(text: 'Email', textController: emailController,),
-                     SizedBox( height: Margins.spaceBetweenTextFields, ),
+                     SizedBox( height: Margins.spaceBetweenTextFields),
+
                ],),
                
              ),
@@ -89,12 +82,7 @@ return Scaffold(
                   ] 
                )),
              ),
-             SizedBox(height: Margins.padding15,),
-             LoginWithButton(icon: Icon(Icons.facebook), text: 'Continue with Facebook',),
-             SizedBox(height: Margins.padding15,),
-             LoginWithButton(icon: Icon(Icons.apple), text: 'Continue with Apple',),
-             SizedBox(height: Margins.padding15,),
-             LoginWithButton(icon: Icon(Icons.login), text: 'Continue with Google',)
+
 
 
              

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:utrzymanie_ruchu_app/core/themes/app_theme.dart';
-import 'package:utrzymanie_ruchu_app/features/login_page/clean_architecture/presentation/pages/sign_in.dart';
+import 'package:utrzymanie_ruchu_app/features/login_page/clean_architecture/presentation/pages/sign_in_email.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         
         
       ,
-      home:  SignInScreen(),
+      home:  SignInEmailScreen(),
     );
   }
 }
