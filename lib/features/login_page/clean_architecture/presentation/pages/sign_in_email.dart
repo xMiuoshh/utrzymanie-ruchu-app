@@ -84,7 +84,7 @@ return Scaffold(
                   ] 
                )),
              ),
-             SizedBox(height: Margins.sizedBox,),
+             SizedBox(height: Margins.sizedBoxd100,),
              LoginWithButton(icon: Icon(Icons.facebook), text: 'Continue with Facebook', widgetColorProperty: AppStateProperty.loginWithButton,),
              SizedBox(height: Margins.padding15,),
              LoginWithButton(icon: Icon(Icons.apple), text: 'Continue with Apple', widgetColorProperty: AppStateProperty.loginWithButton,),

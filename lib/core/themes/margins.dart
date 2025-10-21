@@ -3,7 +3,8 @@ class Margins {
 
 // sized box
 static const spaceBetweenTextFields15 = 15.0;
-static const sizedBox = 50.0;
+static const sizedBoxd50 = 50.0;
+static const sizedBoxd100 = 100.0;
 
 
 //padding
