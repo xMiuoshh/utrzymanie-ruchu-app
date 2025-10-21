@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:utrzymanie_ruchu_app/core/themes/margins.dart';
 import 'package:utrzymanie_ruchu_app/core/themes/text_styles.dart';
+import 'package:utrzymanie_ruchu_app/core/themes/widget_state_property.dart';
 import 'package:utrzymanie_ruchu_app/features/login_page/clean_architecture/presentation/widgets/auth_confirm_button.dart';
 import 'package:utrzymanie_ruchu_app/features/login_page/clean_architecture/presentation/widgets/auth_input_text.dart';
 import 'package:utrzymanie_ruchu_app/features/login_page/clean_architecture/presentation/widgets/login_with.dart';
@@ -68,14 +69,14 @@ return Scaffold(
                 children: [
                
                   TextSpan(
-                    text: 'Forgot Password? ',
+                    text: 'Dont have an Account? ',
                     style: AppTextStyle.authTextSpan1
                   ),
                   TextSpan(
                     recognizer: TapGestureRecognizer()..onTap = () {
                       // TODO route do resetu hasla
                     },
-                    text: 'Reset ',
+                    text: 'Create One ',
                     style: AppTextStyle.authTextSpan2
                   ),
                   
@@ -83,12 +84,12 @@ return Scaffold(
                   ] 
                )),
              ),
+             SizedBox(height: Margins.sizedBox,),
+             LoginWithButton(icon: Icon(Icons.facebook), text: 'Continue with Facebook', widgetColorProperty: AppStateProperty.loginWithButton,),
              SizedBox(height: Margins.padding15,),
-             LoginWithButton(icon: Icon(Icons.facebook), text: 'Continue with Facebook',),
+             LoginWithButton(icon: Icon(Icons.apple), text: 'Continue with Apple', widgetColorProperty: AppStateProperty.loginWithButton,),
              SizedBox(height: Margins.padding15,),
-             LoginWithButton(icon: Icon(Icons.apple), text: 'Continue with Apple',),
-             SizedBox(height: Margins.padding15,),
-             LoginWithButton(icon: Icon(Icons.login), text: 'Continue with Google',)
+             LoginWithButton(icon: Icon(Icons.login), text: 'Continue with Google', widgetColorProperty: AppStateProperty.loginWithButton,)
 
 
              

@@ -6,8 +6,9 @@ import 'package:utrzymanie_ruchu_app/core/themes/text_styles.dart';
 class LoginWithButton extends StatelessWidget{
   final Icon icon;
   final String text;
+  final WidgetStateProperty<Color> widgetColorProperty;
 
-  const LoginWithButton({super.key, required this.icon, required this.text});
+  const LoginWithButton({super.key, required this.icon, required this.text, required this.widgetColorProperty});
 
   @override
   Widget build (BuildContext context) {
@@ -26,16 +27,10 @@ class LoginWithButton extends StatelessWidget{
                
                 style: ButtonStyle(
           
-          backgroundColor: WidgetStateProperty.resolveWith<Color?>((states) {
-            if (states.contains(WidgetState.pressed)) {
-              return AppColors.buttonIsPressed;
-            }else 
-            {return AppColors.primary;
-            }
-          },
+          backgroundColor: widgetColorProperty,
                 
                 
-               ),
+               
               ),child: Stack(
                 alignment: Alignment.center,
                 children: [
